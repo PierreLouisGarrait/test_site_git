@@ -15,23 +15,59 @@
         line-height: 1.6; 
     }
     h1 { 
-        color: #43aeae; 
-        font-family: "Arial Black";
+        color: "black"; 
+        font-family: "Times New Roman", serif;
+        font-style: bold;
+        font-size: 250%;
+        text-align: center;
+    }
+    .prenom {
+        text-align: center;
+        font-family: "Brush Script MT", "Segoe Script", cursive;
+        font-size: 2rem;
+        margin-top: -1rem;
+    }
+    .colonnes {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .colonnes .photo,
+    .colonnes .texte {
+        flex: 1;
+    }
+    .photo img {
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+    }
+    @media (max-width: 600px) {
+        .colonnes { flex-direction: column; }
     }
   </style>
 </head>
 
-<body>
-  <h1>Test site Gihub Pages</h1>
-  <p>Juste pour essayer</p>
+<body style="background-color: rgb(255, 245, 254);">
 
-  <h2>Horaires</h2>
-  <p>Pas pour l'instant...</p>
+    <img src="images/image.png" alt="Image" width="400px" >
 
-  <h2>Contact</h2>
-  <p>Pas pour l'instant...</p>
+    <h1>Test site Gihub Pages</h1>
+    <p class="prenom">Mon prénom</p>
 
-  <img src="images/image.png" alt="Image" width="300px" >
+    <div class="colonnes">
+        <div class="photo">
+            <img src="images/visage.png" alt="Photo du kinésithérapeute">
+        </div>
+        <div class="texte">
+            <p>En deux mots</p>
+        </div>
+    </div>
+
+    <h2>Horaires</h2>
+    <p>Pas pour l'instant...</p>
+
+    <h2>Contact</h2>
+    <p>Pas pour l'instant...</p>
 </body>
 
 </html>

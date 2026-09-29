@@ -9,22 +9,42 @@
   <style>
     body { 
         font-family: sans-serif; 
-        max-width: 700px; 
-        margin: 2rem auto; 
-        padding: 0 1rem; 
-        line-height: 1.6; 
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: white;
+    }
+    .conteneur {
+        max-width: 700px;
+        margin: 0rem auto 0rem auto;
+        padding: 1rem 0rem 0rem 0rem;
+        background-color: rgb(216, 228, 224);
+    }
+    .conteneur_sans_marges {
+        max-width: 700px;
+        margin: 2rem auto 0 auto;
+        padding: 0 0rem 0 0rem;
+        background-color: rgb(216, 228, 224);
     }
     h1 { 
-        color: "black"; 
+        color: black; 
         font-family: "Times New Roman", serif;
-        font-style: bold;
+        font-weight: bold;
         font-size: 250%;
         text-align: center;
+        margin-top: 0;
+    }
+    h2 {
+        font-family: 'Times New Roman', serif;
+        font-weight: bold;
+        font-size: 200%;
+        text-align: left;
+        margin-left: 2rem;
     }
     .prenom {
         text-align: center;
         font-family: "Brush Script MT", "Segoe Script", cursive;
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: -1rem;
     }
     .colonnes {
@@ -32,14 +52,51 @@
         gap: 1.5rem;
         align-items: flex-start;
     }
-    .colonnes .photo,
+    .colonnes .photo {
+        flex: 0 0 25%;
+    }
     .colonnes .texte {
-        flex: 1;
+        flex: 0 0 75%;
     }
     .photo img {
         width: 100%;
+        /* max-width: 250px; */
         height: auto;
-        max-width: 150px;
+        display: block;
+    }
+    .image-haut {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    .bandeau-colonnes {
+        width: 90%;
+        margin: 0 auto;
+        background-color: rgb(180, 200, 194);
+        padding: 1rem;
+    }
+    .tableau-horaires {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    .tableau-horaires td {
+        padding: 0.5rem 0;
+        vertical-align: middle;
+    }
+    .tableau-horaires td:first-child {
+        text-align: left;
+    }
+    .tableau-horaires td:last-child {
+        text-align: right;
+    }
+    .bouton {
+        display: inline-block;
+        background-color: rgb(180, 200, 194);
+        color: black;
+        text-decoration: none;
+        padding: 0.4rem 1rem;
+        border-radius: 6px;
     }
     @media (max-width: 600px) {
         .colonnes { flex-direction: column; }
@@ -47,27 +104,48 @@
   </style>
 </head>
 
-<body style="background-color: rgb(255, 245, 254);">
-
-    <img src="images/image.png" alt="Image" width="400px" >
-
-    <h1>Test site Gihub Pages</h1>
-    <p class="prenom">Mon prénom</p>
-
-    <div class="colonnes">
-        <div class="photo">
-            <img src="images/visage.png" alt="Photo du kinésithérapeute">
-        </div>
-        <div class="texte">
-            <p>En deux mots</p>
-        </div>
+<body>
+    <div class="conteneur_sans_marges">
+        <img src="images/image.png" alt="Image" class="image-haut">
     </div>
 
-    <h2>Horaires</h2>
-    <p>Pas pour l'instant...</p>
+    <div class="conteneur">
+        <h1>Test site Gihub Pages</h1>
+        <p class="prenom">Mon prénom</p>
 
-    <h2>Contact</h2>
-    <p>Pas pour l'instant...</p>
+        <div class="colonnes bandeau-colonnes">
+            <div class="photo">
+                <img src="images/visage.png" alt="Photo du kinésithérapeute">
+            </div>
+            <div class="texte">
+                <p>En deux mots</p>
+            </div>
+        </div>
+
+        <h2>Jours et lieux d'exercice</h2>
+        <table class="tableau-horaires">
+            <tr>
+                <td>Adresse</td>
+                <td>le lundi</td>
+                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td>le lundi</td>
+                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td>le lundi</td>
+                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
+            </tr>
+        </table>
+
+        <h2>Prise de contact</h2>
+        <p>Pas pour l'instant...</p>
+
+    </div>
+
 </body>
 
 </html>

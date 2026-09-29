@@ -6,7 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test site Github Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
   <style>
+    :root {
+        --couleur_titre: rgb(78, 85, 83);
+        --couleur_sous_titre: rgb(78, 85, 83);
+        --couleur_arriere_plan: rgb(216, 228, 224) ;
+        --couleur_bandeau: rgb(180, 200, 194) ;
+        --rose: rgb(255, 230, 240);
+        --noir: black;
+    }
     body { 
         font-family: sans-serif; 
         margin: 0;
@@ -16,19 +26,21 @@
     }
     .conteneur {
         max-width: 700px;
-        margin: 0rem auto 0rem auto;
-        padding: 1rem 0rem 0rem 0rem;
+        margin: 0rem auto 2rem auto;
+        padding: 1rem 1rem 0rem 1rem;
+        border-radius: 0 0 15px 15px;
         background-color: rgb(216, 228, 224);
     }
     .conteneur_sans_marges {
         max-width: 700px;
         margin: 2rem auto 0 auto;
-        padding: 0 0rem 0 0rem;
+        padding: 1rem 1rem 0 1rem;
         background-color: rgb(216, 228, 224);
+        border-radius: 15px 15px 0 0;
     }
     h1 { 
-        color: black; 
-        font-family: "Times New Roman", serif;
+        color: var(--couleur_titre); 
+        font-family: "Abril Fatface", cursive;
         font-weight: bold;
         text-align: center;
         margin-top: 0;
@@ -38,17 +50,28 @@
         font-size: clamp(1.5rem, 8vw, 4rem);
     }
     h2 {
-        font-family: 'Times New Roman', serif;
-        font-weight: bold;
-        font-size: 200%;
+        font-family: "Abril Fatface", cursive;
+        font-style: italic;
+        /* font-size: 200%; */
+        color: var(--couleur_sous_titre);
+        width: 100%;
         text-align: left;
         margin-left: 2rem;
+        font-size: clamp(1rem, 6vw, 2.5rem) ; /* (minimum, préféré, maximum) */
     }
     .prenom {
         text-align: center;
-        font-family: "Brush Script MT", "Segoe Script", cursive;
-        font-size: 3rem;
+        font-family: "Abril Fatface", cursive;
+        font-style: italic;
         margin-top: -1rem;
+        width: 100%;
+        font-size: clamp(1.5rem, 8vw, 4rem);
+        text-shadow:
+            -2px -2px 0 white,
+            2px -2px 0 white,
+            -2px  2px 0 white,
+            2px  2px 0 white;
+        color: var(--couleur_bandeau);
     }
     .colonnes {
         display: flex;
@@ -77,11 +100,13 @@
         margin: 0 auto;
         background-color: rgb(180, 200, 194);
         padding: 1rem;
+        border-radius: 10px;
     }
     .tableau-horaires {
         width: 70%;
         border-collapse: collapse;
-        margin: 0 auto;
+        margin: 0 auto ;
+
     }
     .tableau-horaires td {
         padding: 0.5rem 0;
@@ -89,6 +114,8 @@
     }
     .tableau-horaires td:first-child {
         text-align: left;
+        border-left: 2px solid var(--couleur_bandeau);
+        padding-left: 1rem;
     }
     .tableau-horaires td:last-child {
         text-align: right;
@@ -125,7 +152,7 @@
             </div>
         </div>
 
-        <h2>Jours et lieux d'exercice</h2>
+        <h2>Lieux et jours d'exercice</h2>
         <table class="tableau-horaires">
             <tr>
                 <td>Adresse</td>
@@ -145,7 +172,16 @@
         </table>
 
         <h2>Prise de contact</h2>
-        <p>Pas pour l'instant...</p>
+        <table class="tableau-horaires">
+            <!-- <tr> -->
+                <td>(cliquer pour copier) </td>
+                <!-- <td></td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td></td> -->
+            <td>mon_adresse_mail@qqchose.com</td>
+            <!-- </tr> -->
+        </table>
 
     </div>
 

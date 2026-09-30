@@ -1,190 +1,361 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test site Github Pages</title>
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-  <style>
-    :root {
-        --couleur_titre: rgb(78, 85, 83);
-        --couleur_sous_titre: rgb(78, 85, 83);
-        --couleur_arriere_plan: rgb(216, 228, 224) ;
-        --couleur_bandeau: rgb(180, 200, 194) ;
-        --rose: rgb(255, 230, 240);
-        --noir: black;
-    }
-    body { 
-        font-family: sans-serif; 
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        background-color: white;
-    }
-    .conteneur {
-        max-width: 700px;
-        margin: 0rem auto 2rem auto;
-        padding: 1rem 1rem 0rem 1rem;
-        border-radius: 0 0 15px 15px;
-        background-color: rgb(216, 228, 224);
-    }
-    .conteneur_sans_marges {
-        max-width: 700px;
-        margin: 2rem auto 0 auto;
-        padding: 1rem 1rem 0 1rem;
-        background-color: rgb(216, 228, 224);
-        border-radius: 15px 15px 0 0;
-    }
-    h1 { 
-        color: var(--couleur_titre); 
-        font-family: "Abril Fatface", cursive;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 0;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: clamp(1.5rem, 8vw, 4rem);
-    }
-    h2 {
-        font-family: "Abril Fatface", cursive;
-        font-style: italic;
-        /* font-size: 200%; */
-        color: var(--couleur_sous_titre);
-        width: 100%;
-        text-align: left;
-        margin-left: 2rem;
-        font-size: clamp(1rem, 6vw, 2.5rem) ; /* (minimum, préféré, maximum) */
-    }
-    .prenom {
-        text-align: center;
-        font-family: "Abril Fatface", cursive;
-        font-style: italic;
-        margin-top: -1rem;
-        width: 100%;
-        font-size: clamp(1.5rem, 8vw, 4rem);
-        text-shadow:
-            -2px -2px 0 white,
-            2px -2px 0 white,
-            -2px  2px 0 white,
-            2px  2px 0 white;
-        color: var(--couleur_bandeau);
-    }
-    .colonnes {
-        display: flex;
-        gap: 1.5rem;
-        align-items: flex-start;
-    }
-    .colonnes .photo {
-        flex: 0 0 30%;
-    }
-    .colonnes .texte {
-        flex: 0 0 70%;
-    }
-    .photo img {
-        width: 100%;
-        /* max-width: 250px; */
-        height: auto;
-        display: block;
-    }
-    .image-haut {
-        width: 100%;
-        display: block;
-        margin: 0;
-    }
-    .bandeau-colonnes {
-        width: 90%;
-        margin: 0 auto;
-        background-color: rgb(180, 200, 194);
-        padding: 1rem;
-        border-radius: 10px;
-    }
-    .tableau-horaires {
-        width: 70%;
-        border-collapse: collapse;
-        margin: 0 auto ;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>Léa Braz Da Costa - Ostéopathie</title>
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+AU+NSW:wght@100..400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --vert:#7a8f89;
+    --vert-clair:#eef4f2;
+    --fond:#f7faf8;
+    --texte:#3d4543;
+    --sous-titre: #666;
+    --blanc:#ffffff;
+    --ombre:0 8px 25px rgba(0,0,0,.08);
+    --rose: rgb(249, 238, 253) ;
+    --ombre-cabinets: 0 3px 10px rgba(0,0,0,.08);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    line-height:1.6;
+    background:var(--fond);
+    color:var(--texte);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    max-width:900px;
+    margin:0 auto 0 auto;
+    /* border-radius:20px 20px 0 0; */
+    overflow:hidden;
+    box-shadow:var(--ombre);
+}
+
+.hero img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    background-color: var(--vert-clair);
+}
+
+/* ========================= */
+/* CONTENU */
+/* ========================= */
+
+.conteneur{
+    max-width:900px;
+    margin:0 auto 0 auto;
+    background:white;
+    padding:2rem;
+    /* border-radius:0 0 20px 20px; */
+    box-shadow:var(--ombre);
+}
+
+.nom{
+    text-align:center;
+    /* font-family:"Abril Fatface", serif; */
+    font-family: "Playwrite AU NSW";
+    font-size:clamp(2rem,7vw,4rem);
+    color:var(--vert);
+    margin:0;
+}
+
+.specialite{
+    text-align:center;
+    /* font-family:"Abril Fatface", serif; */
+    /* font-family: "Playwrite AU NSW"; */
+    font-size:clamp(1.5rem,5vw,3rem);
+    color:var(--texte);
+    margin-top:-0.5rem;
+    margin-bottom:2rem;
+}
+
+/* ========================= */
+/* PRESENTATION */
+/* ========================= */
+
+.presentation{
+    display:flex;
+    gap:2rem;
+    align-items:center;
+    background:var(--rose);
+    padding:2rem;
+    border-radius:15px;
+}
+
+.photo{
+    flex:0 0 220px;
+}
+
+.photo img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    border:6px solid white;
+    box-shadow:0 5px 20px var(--ombre);
+}
+
+.texte{
+    flex:1;
+    text-align: justify;
+}
+
+/* ========================= */
+/* TITRES */
+/* ========================= */
+
+h2{
+    /* font-family:"Abril Fatface", serif; */
+    font-weight:normal;
+    color:var(--vert);
+    margin-top:3rem;
+    margin-bottom:0.1rem;
+    font-size:clamp(1.5rem,5vw,3rem);
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:1px;
+    background:var(--vert);
+    margin-top:2px;
+}
+
+.sous-titre{
+    margin-bottom:1.5rem;
+    font-style:italic;
+    color:var(--sous-titre);
+}
+
+/* ========================= */
+/* CABINETS */
+/* ========================= */
+
+.cabinet{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border-radius:15px;
+    padding:1.2rem 1.4rem;
+    margin-bottom:1rem;
+    box-shadow: var(--ombre-cabinets);
+}
+
+.cabinet-adresse{
+    flex:1;
+}
+
+.cabinet-adresse strong{
+    display:block;
+    /* color:var(--vert); */
+    font-size: 1.2rem;
+}
+
+.cabinet-horaires{
+    text-align:center;
+    padding:0 1rem;
+}
+
+.bouton{
+    background:#00a7e7;
+    color:white;
+    text-decoration:none;
+    padding:.75rem 1.2rem;
+    border-radius:30px;
+    font-weight:bold;
+    /* transition:.2s; */
+    /* border:4px solid #baecff; */
+}
+
+/* .bouton:hover{
+    transform:translateY(-2px);
+} */
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact{
+    background:var(--vert-clair);
+    border-radius:15px;
+    padding:2rem;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+.contact a{
+    color:var(--texte);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:700px){
+
+    .conteneur{
+        padding:1.2rem;
     }
-    .tableau-horaires td {
-        padding: 0.5rem 0;
-        vertical-align: middle;
+
+    .presentation{
+        flex-direction:column;
+        text-align:center;
     }
-    .tableau-horaires td:first-child {
-        text-align: left;
-        border-left: 2px solid var(--couleur_bandeau);
-        padding-left: 1rem;
+
+    .photo{
+        flex:none;
     }
-    .tableau-horaires td:last-child {
-        text-align: right;
+
+    .photo img{
+        width:170px;
+        height:170px;
     }
-    .bouton {
-        display: inline-block;
-        background-color: rgb(180, 200, 194);
-        color: black;
-        text-decoration: none;
-        padding: 0.4rem 1rem;
-        border-radius: 6px;
+
+    .cabinet{
+        flex-direction:column;
+        gap:1rem;
+        text-align:center;
     }
-    /* @media (max-width: 600px) {
-        .colonnes { flex-direction: column; }
-    } */
-  </style>
+
+    .cabinet-horaires{
+        padding:0;
+    }
+}
+
+</style>
 </head>
 
 <body>
-    <div class="conteneur_sans_marges">
-        <img src="images/image.png" alt="Image" class="image-haut">
-    </div>
 
-    <div class="conteneur">
-        <h1>Test site Gihub Pages</h1>
-        <p class="prenom">Mon prénom</p>
+<div class="hero">
+    <img src="images/image_haut.png" alt="Cabinet d'ostéopathie">
+</div>
 
-        <div class="colonnes bandeau-colonnes">
-            <div class="photo">
-                <img src="images/visage.png" alt="Photo du kinésithérapeute">
-            </div>
-            <div class="texte">
-                <p>En deux mots</p>
-            </div>
+<div class="conteneur">
+
+    <h1 class="nom">Léa Braz Da Costa</h1>
+    <div class="specialite">Ostéopathie</div>
+
+    <div class="presentation">
+
+        <div class="photo">
+            <img src="images/portrait_lea.png" alt="Portrait de Léa Braz Da Costa">
         </div>
 
-        <h2>Lieux et jours d'exercice</h2>
-        <table class="tableau-horaires">
-            <tr>
-                <td>Adresse</td>
-                <td>le lundi</td>
-                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
-            </tr>
-            <tr>
-                <td>Adresse</td>
-                <td>le lundi</td>
-                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
-            </tr>
-            <tr>
-                <td>Adresse</td>
-                <td>le lundi</td>
-                <td><a href="https://www.google.com" class="bouton">Voir</a></td>
-            </tr>
-        </table>
+        <div class="texte">
+            <p>
+                Diplômée du CSO Paris, j'exerce dans plusieurs cabinets à
+                Rueil-Malmaison et à Suresnes.
+            </p>
 
-        <h2>Prise de contact</h2>
-        <table class="tableau-horaires">
-            <!-- <tr> -->
-                <td>(cliquer pour copier) </td>
-                <!-- <td></td> -->
-            <!-- </tr> -->
-            <!-- <tr> -->
-                <!-- <td></td> -->
-            <td>mon_adresse_mail@qqchose.com</td>
-            <!-- </tr> -->
-        </table>
+            <p>
+                J’utilise différentes techniques ostéopathiques :
+                tissulaires, structurelles, fonctionnelles,
+                viscérales et crâniennes. J'excelle dans le réalignement de la mâchoire.
+            </p>
+        </div>
 
     </div>
 
-</body>
+    <h2>Lieux et jours d'exercice</h2>
 
+    <div class="sous-titre">
+        Ainsi que les pages Doctolib&reg pour la prise de rendez-vous
+    </div>
+
+    <div class="cabinet">
+
+        <div class="cabinet-adresse">
+            <strong>Rueil-Malmaison</strong>
+            10 rue du Truc
+        </div>
+
+        <div class="cabinet-horaires">
+            Lundi et Mardi<br>
+            17h – 20h
+        </div>
+
+        <a href="https://www.google.com" class="bouton">
+            Prendre RDV
+        </a>
+
+    </div>
+
+    <div class="cabinet">
+
+        <div class="cabinet-adresse">
+            <strong>Suresnes</strong>
+            20 avenue de la Chose
+        </div>
+
+        <div class="cabinet-horaires">
+            Mercredi<br>
+            15h – 20h
+        </div>
+
+        <a href="https://www.google.com" class="bouton">
+            Prendre RDV
+        </a>
+
+    </div>
+
+    <div class="cabinet">
+
+        <div class="cabinet-adresse">
+            <strong>Rueil-Malmaison</strong>
+            30 passage du Bidule
+        </div>
+
+        <div class="cabinet-horaires">
+            Samedi<br>
+            9h – 20h
+        </div>
+
+        <a href="https://www.google.com" class="bouton">
+            Prendre RDV
+        </a>
+
+    </div>
+
+    <h2>Prise de contact</h2>
+
+    <div class="sous-titre">
+        Cliquer sur l'adresse pour la copier
+    </div>
+
+    <div class="contact">
+        <a href="mailto:mon_adresse_mail@qqchose.com">
+            mon_adresse_mail@qqchose.com
+        </a>
+    </div>
+</div>
+<div class="hero">
+    <img src="images/image_bas.png" alt="Cabinet d'ostéopathie">
+</div>
+<footer>&copy Léa Braz Da Costa, ostéopathe</footer>
+</body>
 </html>

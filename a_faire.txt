@@ -1,0 +1,7 @@
+mettre la bonne adresse mail
+mettre la bonne photo
+corriger images des bandeaux
+faire que les boutons cabinets soient générés automatiquement via lecture d'un tableau
+mettre les bons url
+mettre les bonnes adresses
+mettre les cabinets dans l'ordre Rueil, Rueil, Suresnes

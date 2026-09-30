@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test site Github Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --couleur_titre: rgb(78, 85, 83);
+        --couleur_sous_titre: rgb(78, 85, 83);
+        --couleur_arriere_plan: rgb(216, 228, 224) ;
+        --couleur_bandeau: rgb(180, 200, 194) ;
+        --rose: rgb(255, 230, 240);
+        --noir: black;
+    }
+    body { 
+        font-family: sans-serif; 
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: white;
+    }
+    .conteneur {
+        max-width: 700px;
+        margin: 0rem auto 2rem auto;
+        padding: 1rem 1rem 1rem 1rem;
+        border-radius: 0 0 15px 15px;
+        background-color: rgb(216, 228, 224);
+    }
+    .conteneur_sans_marges {
+        max-width: 700px;
+        margin: 2rem auto 0 auto;
+        padding: 1rem 1rem 0 1rem;
+        background-color: rgb(216, 228, 224);
+        border-radius: 15px 15px 0 0;
+    }
+    h1 { 
+        color: var(--couleur_titre); 
+        font-family: "Abril Fatface", cursive ;
+        font-weight: normal;
+        /* font-weight: bold ; */
+        /* font-style: italic; */
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(1.5rem, 8vw, 4rem);
+    }
+    h2 {
+        font-family: "Abril Fatface", cursive;
+        /* font-style: italic ; */
+        font-weight: normal;
+        /* font-size: 200%; */
+        color: var(--couleur_sous_titre);
+        width: 100%;
+        text-align: left;
+        margin-left: 2rem;
+        margin-bottom: 0rem;
+        font-size: clamp(1rem, 6vw, 2.5rem) ; /* (minimum, préféré, maximum) */
+    }
+    .sous_titre_h2 {
+        font-style: italic;
+        color: var(--couleur_sous_titre);
+        width: 100%;
+        text-align: left;
+        margin-left: 2rem;
+        margin-bottom: 0rem;
+        /* font-size: clamp(1rem, 6vw, 2.5rem) ; (minimum, préféré, maximum) */
+    }
+    .prenom {
+        text-align: center;
+        font-family: "Abril Fatface", cursive;
+        font-style: italic;
+        margin-top: -1rem;
+        width: 100%;
+        font-size: clamp(1.5rem, 8vw, 4rem);
+        /* text-shadow:
+            -2px -2px 0 white,
+            2px -2px 0 white,
+            -2px  2px 0 white,
+            2px  2px 0 white; */
+        color: var(--couleur_titre);
+    }
+    .colonnes {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .colonnes .photo {
+        flex: 0 0 30%;
+    }
+    .colonnes .texte {
+        flex: 0 0 70%;
+    }
+    .photo img {
+        width: 100%;
+        /* max-width: 250px; */
+        height: auto;
+        display: block;
+    }
+    .image-haut {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    .bandeau-colonnes {
+        width: 100%;
+        margin: 0 auto;
+        background-color: var(--rose);
+        padding: 0 1rem 0 0 ;
+        /* border-radius: 10px; */
+    }
+    .tableau-horaires {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 0 auto ;
+
+    }
+    .tableau-horaires td {
+        padding: 0.5rem 0;
+        vertical-align: middle;
+    }
+    .tableau-horaires td:first-child {
+        text-align: left;
+        /* border-left: 2px solid var(--couleur_bandeau); */
+        /* padding-left: 1rem; */
+    }
+    .tableau-horaires td:last-child {
+        text-align: right;
+    }
+    .bouton {
+        display: inline-block;
+        background-color: rgb(180, 200, 194);
+        color: black;
+        text-decoration: none;
+        padding: 0.4rem 1rem;
+        border-radius: 6px;
+    }
+    /* @media (max-width: 600px) {
+        .colonnes { flex-direction: column; }
+    } */
+    .email {
+        text-align: center ;
+        text-decoration: underline;
+        color: blue;
+        margin-bottom: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="conteneur_sans_marges">
+        <img src="images/image.png" alt="Image" class="image-haut">
+    </div>
+
+    <div class="conteneur">
+        <p class="prenom">Léa Braz Da Costa</p>
+        <h1>Ostéopathie</h1>
+
+        <div class="colonnes bandeau-colonnes">
+            <div class="photo">
+                <img src="images/visage.png" alt="Portrait">
+            </div>
+            <div class="texte">
+                <p>
+                    Diplômée du CSO Paris, j'exerce dans plusieurs cabinets à Rueil-Malmaison et à Suresnes. 
+                    <br>
+                    <br>
+                    J’utilise différentes techniques ostéopathiques : tissulaires, structurelles, fonctionnelles, viscérales et crâniennes.
+                </p>
+            </div>
+        </div>
+
+        <h2>Lieux et jours d'exercice</h2>
+        <div class="sous_titre_h2">
+            Ainsi que les pages Doctolib pour la prise de rendez-vous
+        </div>
+
+        <table class="tableau-horaires">
+            <tr>
+                <td>10 rue du Truc, Rueil-Malmaison</td>
+                <td>Lundi et Mardi, 17h à 20h</td>
+                <td><a href="https://www.google.com" class="bouton">RDV</a></td>
+            </tr>
+            <tr>
+                <td>20 avenue de la Chose, Suresnes</td>
+                <td>Mercredi 15h à 20h</td>
+                <td><a href="https://www.google.com" class="bouton">RDV</a></td>
+            </tr>
+            <tr>
+                <td>30 passage du bidule, Rueil-Malmaison</td>
+                <td>Samedi 9h à 20h</td>
+                <td><a href="https://www.google.com" class="bouton">RDV</a></td>
+            </tr>
+        </table>
+
+        <h2>Prise de contact</h2>
+        <div class="sous_titre_h2">
+            Cliquer pour copier
+        </div>
+
+        <div class="email">
+            mon_adresse_mail@qqchose.com
+        </div>
+    </div>
+
+</body>
+
+</html>
